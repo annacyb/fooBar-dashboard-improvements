@@ -63,4 +63,24 @@
 }
 
 
+.fadeOut {
+    animation: fadeOutAnim 1.2s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+  }
+
+
+@keyframes fadeOutAnim {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+
+  .displayNone {
+      display: none;
+  }
+
     

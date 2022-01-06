@@ -5,6 +5,7 @@ import {
     showBartendersOrders,
     checkMediaQueries,
 } from "./bartenders-orders.js";
+import { hideLoader } from "../modules/loader.js";
 
 // show loader imidiately --> hide loader for when data is loaded
 
@@ -23,7 +24,7 @@ async function start() {
 async function loop() {
     await loadData();
     showData();
-
+    hideLoader();
     setTimeout(loop, refresh_rate);
 }
 
