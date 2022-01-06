@@ -6,6 +6,8 @@ import {
     checkMediaQueries,
 } from "./bartenders-orders.js";
 
+// show loader imidiately --> hide loader for when data is loaded
+
 window.addEventListener("DOMContentLoaded", checkMediaQueries);
 window.addEventListener("DOMContentLoaded", start);
 
