@@ -25,27 +25,27 @@
 
 .dot:first-child {
     background-color: #aad2f0;
-    animation-delay: 0.1s;
+    animation-delay: 0s;
 }
     
 .dot:nth-child(2) {
     background-color: #CAABFF;
-    animation-delay: 0.2s;
+    animation-delay: 0.1s;
 }
     
 .dot:nth-child(3) {
     background-color: #EFACFF;
-    animation-delay: 0.3s;
+    animation-delay: 0.2s;
 }
 
 .dot:nth-child(4) {
     background-color: #FFBB87;
-    animation-delay: 0.4s;
+    animation-delay: 0.3s;
 }
     
 .dot:nth-child(5) {
     background-color: #FED13D;
-    animation-delay: 0.5s
+    animation-delay: 0.4s
 }
 
 
@@ -64,9 +64,9 @@
 
 
 .fadeOut {
-    animation: fadeOutAnim 1.2s;
+    animation: fadeOutAnim 0.7s;
     animation-iteration-count: 1;
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-in-out;
   }
 
 

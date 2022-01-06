@@ -2,6 +2,8 @@ export function hideLoader() {
     setTimeout(() => {
         const loaderElement = document.querySelector("#loader-background");
         loaderElement.classList.add("fadeOut");
-        loaderElement.classList.add("displayNone");
-    }, 1000);
+        setTimeout(() => {
+            loaderElement.classList.add("displayNone");
+        }, 700);
+    }, 800);
 }
