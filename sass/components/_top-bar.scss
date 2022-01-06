@@ -1,0 +1,123 @@
+#web-title-mobile {
+    display: none;
+}
+
+#top-bar {
+    height: 66px;
+    background-color: white;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    border-bottom: #6E9BBC 1px solid;
+
+    display: grid;
+    grid-template-columns: 140px 0.5fr 0.3fr auto 60px auto 0px;
+
+}
+
+#web-title {
+    grid-column: 2 / span 1;
+
+    align-self: center;
+}
+
+#cont-closing-time {
+    grid-column: 4 / span 1;
+
+    display: flex;
+    align-self: center;
+    justify-self: right;
+}
+
+.cont-separator {
+    grid-column: 5 / span 1;
+    width: 1px;
+    height: 25px;
+    background-color: #6E9BBC;
+    opacity: 70%;
+    align-self: center;
+    justify-self: center;
+}
+
+#cont-current-time {
+    grid-column: 6 / span 1;
+
+    align-self: center;
+}
+
+.icon1 {
+    width: 22px;
+    height: auto;
+    padding-right: 10px;
+}
+
+#top-bar > h1 {
+    font-size: 1.5rem;
+}
+
+
+
+#top-bar > div > p {
+    font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    #closing-in {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #top-bar {
+        display: grid;
+        grid-template-columns: 25px auto 0.8fr 50px auto 0px;
+    }
+
+    #web-title {
+        display: none;
+    }
+
+    #web-title-mobile {
+        grid-column: 2 / span 1;
+        display: block;
+        // margin-left: 30px;
+        font-size: 0.7rem;
+        grid-row: 1 / span 2;
+        align-self: center;
+    }
+
+    #cont-closing-time {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 2;
+        align-self: center;
+    }
+
+    .cont-separator {
+        grid-column: 4 / span 1;
+        grid-row: 1 / span 2;
+        align-self: center;
+    }
+
+    #cont-current-time {
+        grid-column: 5 / span 1;
+        grid-row: 1 / span 2;
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #cont-closing-time, .cont-separator {
+        display: none;
+    }
+
+    #cont-current-time {
+        text-align: right;
+        padding-right: 25px;
+    }
+}
+
+

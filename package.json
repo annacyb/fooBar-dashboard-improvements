@@ -1,0 +1,17 @@
+{
+  "name": "foobar-dashboard",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.43.5",
+    "vite": "^2.6.4"
+  },
+  "dependencies": {
+    "chart.js": "^3.6.2",
+    "dayjs": "^1.10.7"
+  }
+}

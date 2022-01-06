@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="shortcut icon" type="image/png" href="./images/companyIcon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.scss" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <title>Orders</title>
+  </head>
+  <body>
+    <head>
+      <nav>
+        <div id="side-nav">
+          <a href="./index.html">
+            <img src="./images/logo-small.png" alt="Logo" class="logo-img" />
+          </a>
+
+          <a href="./index.html">
+            <div class="nav-elem">
+              <img src="./icons/orders-active.svg" alt="" />
+              <p style="font-weight: 600">Orders</p>
+            </div>
+          </a>
+
+          <a href="./inventory.html">
+            <div class="nav-elem">
+              <img src="./icons/inventory&statistics.svg" alt="" />
+              <p>Inventory<br />& Statistics</p>
+            </div>
+          </a>
+
+          <a href="./history.html">
+            <div class="nav-elem">
+              <img src="./icons/history.svg" alt="" />
+              <p>History</p>
+            </div>
+          </a>
+        </div>
+
+        <div id="nav-bottom">
+          <a href="./index.html">
+            <h1 class="logo">LOGO</h1>
+          </a>
+
+          <a href="./index.html">
+            <div class="nav-elem-mobile">
+              <img src="./icons/orders-active.svg" alt="" />
+              <p>Orders</p>
+            </div>
+          </a>
+
+          <a href="./inventory.html">
+            <div class="nav-elem-mobile">
+              <img src="./icons/inventory&statistics.svg" alt="" />
+              <p>Inventory<br />& Statistics</p>
+            </div>
+          </a>
+
+          <a href="./history.html">
+            <div class="nav-elem-mobile">
+              <img src="./icons/history.svg" alt="" />
+              <p>History</p>
+            </div>
+          </a>
+        </div>
+      </nav>
+    </head>
+
+    <main id="main-orders">
+      <div id="top-bar">
+        <h1 id="web-title">Orders</h1>
+        <div id="cont-closing-time" class="closing-time">
+          <img src="./icons/time-left.svg" alt="" class="icon1" />
+          <p><span id="closing-in">Closing in </span><span id="closingHour"></span>h <span id="closingMinutes"></span><span>min</span></p>
+        </div>
+        <div class="cont-separator"></div>
+        <div id="web-title-mobile"><h1>Orders</h1></div>
+        <div id="cont-current-time" class="current-time">
+          <p class="current-time-place"></p>
+        </div>
+      </div>
+
+      <div>
+        <ul id="tabs">
+          <li class="selectedTab"><a href="#/" data-bartender="Queue">Queue</a></li>
+          <li><a href="#/" data-bartender="Dannie">Dannie</a></li>
+          <li><a href="#/" data-bartender="Jonas">Jonas</a></li>
+          <li><a href="#/" data-bartender="Klaus">Klaus</a></li>
+          <li><a href="#/" data-bartender="Peter">Peter</a></li>
+        </ul>
+      </div>
+
+      <div id="orders-content">
+        <section id="queue-wrapper">
+          <h2>Orders in queue: <span id="queue-nr">0</span></h2>
+
+          <!-- Template for orders in a queue -->
+          <template class="queue-order-template">
+            <div class="queue-order-wrapper">
+              <div class="order-top-bar">
+                <h2>Order <span class="order-id"></span></h2>
+                <div class="flex">
+                  <img src="./icons/time.svg" alt="" />
+                  <p class="order-time"></p>
+                </div>
+              </div>
+              <!-- Placing here order details created from "queue-order-details-template" template -->
+              <div class="order-details-place"></div>
+            </div>
+          </template>
+
+          <!-- Template for order details (types of beers) in each order -->
+          <template class="queue-order-details-template">
+            <div class="order-details">
+              <div class="order-details-row">
+                <p><span class="order-details-row-nr"></span><span class="order-details-row-name"></span></p>
+              </div>
+            </div>
+          </template>
+
+          <!-- Placing here elements created on based on "queue-order-template" template -->
+          <div id="queue-orders-place"></div>
+        </section>
+
+        <section id="bartenders-wrapper">
+          <!-- Bartenders- template for orders -->
+          <template class="bartenders-order-template">
+            <div class="order-wrapper">
+              <div class="top-bar-line"></div>
+              <div class="order-top-bar">
+                <h2>Order <span class="order-id"></span></h2>
+                <div class="flex">
+                  <img src="./icons/time.svg" alt="" />
+                  <p class="order-time">20:23:45</p>
+                </div>
+              </div>
+              <!-- Placing here order details created from "bartender-order-details-template" template -->
+              <div class="bartender-order-details-place"></div>
+              <button class="button-ready"><i class="material-icons" style="font-size: 20px">check</i>READY</button>
+            </div>
+          </template>
+
+          <!-- Bartenders- Template for order details (types of beers) in each order -->
+          <template class="bartender-order-details-template">
+            <div class="order-details">
+              <div class="order-details-row">
+                <p><span class="order-details-row-nr"></span><span class="order-details-row-name"></span></p>
+              </div>
+            </div>
+          </template>
+
+          <div class="bartender-cont" id="bartender-dannie">
+            <div class="bartender-top-bar">
+              <div class="personal-info">
+                <img class="bartender-photo" src="./images/dannie.jpg" alt="" />
+                <div>
+                  <h4 class="bartender-name">Dannie</h4>
+                  <p class="bartender-nr-orders"><span>0</span> orders</p>
+                </div>
+              </div>
+              <div>
+                <button class="button-break">BREAK</button>
+                <button class="button-leave">LEAVE</button>
+              </div>
+            </div>
+
+            <!-- Placing "bartenders-order-template" -->
+            <div class="bartender-orders-place"></div>
+          </div>
+
+          <div class="bartender-cont" id="bartender-jonas">
+            <div class="bartender-top-bar">
+              <div class="personal-info">
+                <img class="bartender-photo" src="./images/jonas.jpg" alt="" />
+                <div>
+                  <h4 class="bartender-name">Jonas</h4>
+                  <p class="bartender-nr-orders"><span>0</span> orders</p>
+                </div>
+              </div>
+              <div>
+                <button class="button-break">BREAK</button>
+                <button class="button-leave">LEAVE</button>
+              </div>
+            </div>
+
+            <!-- Placing "bartenders-order-template" -->
+            <div class="bartender-orders-place"></div>
+          </div>
+
+          <div class="bartender-cont" id="bartender-klaus">
+            <div class="bartender-top-bar">
+              <div class="personal-info">
+                <img class="bartender-photo" src="./images/klaus.png" alt="" />
+                <div>
+                  <h4 class="bartender-name">Klaus</h4>
+                  <p class="bartender-nr-orders"><span>0</span> orders</p>
+                </div>
+              </div>
+              <div>
+                <button class="button-break">BREAK</button>
+                <button class="button-leave">LEAVE</button>
+              </div>
+            </div>
+
+            <!-- Placing "bartenders-order-template" -->
+            <div class="bartender-orders-place"></div>
+          </div>
+
+          <div class="bartender-cont" id="bartender-peter">
+            <div class="bartender-top-bar">
+              <div class="personal-info">
+                <img class="bartender-photo" src="./images/peter.jpg" alt="" />
+                <div>
+                  <h4 class="bartender-name">Peter</h4>
+                  <p class="bartender-nr-orders"><span>0</span> orders</p>
+                </div>
+              </div>
+              <div>
+                <button class="button-break">BREAK</button>
+                <button class="button-leave">LEAVE</button>
+              </div>
+            </div>
+
+            <template class="order-template"></template>
+
+            <!-- Placing "bartenders-order-template" -->
+            <div class="bartender-orders-place"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="./script/orders/main.js"></script>
+    <script type="module" src="./script/modules/time-counting.js"></script>
+  </body>
+</html>

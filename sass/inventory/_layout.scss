@@ -1,0 +1,66 @@
+@use '../base/colors';
+#inventory {
+  background: linear-gradient(180deg, white 0%, #d9e4ed 100%);
+  background-size: cover;
+  margin-bottom: 30vw;
+}
+
+#storageAndStat {
+  margin-top: 80px;
+  // margin-bottom: 100px;
+}
+
+.areas {
+  margin-top: 5vw;
+}
+
+@keyframes run {
+  50% {
+    transform: translateX(2vw);
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  #inventory {
+    margin-bottom: 5vw;
+  }
+  main {
+    margin-left: 100px;
+  }
+  #top-bar > h1 {
+    width: 40vw;
+    font-size: 1.2rem;
+  }
+
+  #storageAndStat {
+    h1 {
+      padding: 2vw;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    margin-left: 100px;
+  }
+
+  #storageAndStat {
+    margin-left: 20px;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 43% 54%;
+    column-gap: 1.5%;
+    row-gap: 1vw;
+    h1 {
+      padding: 1vw;
+    }
+  }
+
+  #inventory {
+    height: 100vh;
+    margin-bottom: 5vw;
+  }
+  .areas {
+    margin-top: 0vw;
+  }
+}

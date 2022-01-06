@@ -1,0 +1,100 @@
+@use '../base/colors';
+
+.circle {
+  width: 12vw;
+  height: 2vw;
+  padding-top: 10vw;
+  background: linear-gradient(180deg, #fdeebb 0%, rgba(255, 255, 255, 1) 100%);
+  border-radius: 200%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tap-name {
+  font-weight: 100;
+  text-align: center;
+  font-size: 3.1vw;
+}
+.tap-amount {
+  text-align: center;
+  font-size: 4vw;
+}
+
+.tap-info-wrap {
+  padding-top: 3vw;
+  padding-bottom: 5vw;
+}
+
+.tap-list-container {
+  ul {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 1vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 10px;
+
+    box-shadow: colors.$box-shadow;
+    background-color: white;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .circle {
+    width: 7vw;
+    height: 1.5vw;
+    padding-top: 5.5vw;
+  }
+
+  .tap-name {
+    font-size: 1.8vw;
+  }
+
+  .tap-amount {
+    font-size: 2.4vw;
+  }
+
+  .tap-info-wrap {
+    padding-top: 1.6vw;
+    padding-bottom: 1.9vw;
+  }
+
+  .tap-list-container {
+    ul {
+      width: 90%;
+      height: 29vw;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .circle {
+    width: 4.5vw;
+    height: 1vw;
+    padding-top: 3.5vw;
+  }
+
+  .tap-name {
+    font-size: 1.05vw;
+  }
+
+  .tap-amount {
+    font-size: 1.4vw;
+  }
+
+  .tap-info-wrap {
+    padding-top: 1.3vw;
+    padding-bottom: 1.3vw;
+  }
+
+  .tap-list-container {
+    ul {
+      width: auto;
+      height: 18vw;
+      padding: 1vw;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}

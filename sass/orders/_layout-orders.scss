@@ -1,0 +1,422 @@
+@use "../base/colors";
+
+// GENERAL
+
+#main-orders {
+    margin-left: 100px;
+}
+
+#orders-content {
+    margin-top: 66px;
+    display: flex;
+    margin-left: 0px;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(217,228,237,1) 100%);
+}
+
+#queue-wrapper {
+    width: 30vw;
+    min-width: 350px;
+    max-width: 500px;
+    background-color: #ebebeb;
+
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 25px;
+    padding-bottom: 30px;
+
+    min-height: calc(100vh - 126px);
+
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.3) 100%);
+}
+
+#queue-wrapper > h2 {
+    margin-bottom: 20px;
+}
+
+.queue-order-wrapper {
+    background-color: white;
+
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+
+    border-radius: 5px 5px 10px 10px;
+    box-shadow: 0px 3px 10px 1px rgba(110,155,188,0.3);
+
+    max-width: 420px;
+}
+
+.displayNone {
+    display: none !important;
+}
+
+
+// BARTENDERS
+
+#bartenders-wrapper {
+    display: flex;
+    flex-flow: wrap;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: fit-content;
+}
+
+.bartender-cont {
+    min-height: 300px;
+
+    width: 47%;
+    min-width: 350px;
+    border-radius: 0px;
+
+    margin: 0px;
+    padding-bottom: 30px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    max-width: 500px;
+}
+
+.bartender-cont:nth-of-type(1) {
+    border-bottom: colors.$blue-color2 1px solid;
+}
+
+.bartender-cont:nth-of-type(2) {
+    border-left: colors.$blue-color2 1px solid;
+    border-bottom: colors.$blue-color2 1px solid;
+}
+
+.bartender-cont:nth-of-type(3) {
+    border-right: colors.$blue-color2 1px solid;
+}
+
+.bartender-top-bar {
+    display: flex;
+    height: 44px;
+
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    place-content: space-between;
+}
+
+.top-bar-line {
+    height: 3px;
+    width: 100%;
+    // background-color: $orange-color2;
+    background-color: #FFC778;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.personal-info {
+    display: flex;
+}
+
+.bartender-photo {
+    width: 44px;
+    height: 44px;
+    border-radius: 500px;
+    filter: grayscale(1);
+    margin-right: 15px;
+    box-shadow: 0px 3px 5px 1px rgb(110 155 188 / 50%);
+}
+
+.button-break {
+    height: 44px;
+    width: 90px;
+
+    border: none;
+    background-color: white;
+    margin-right: 5px;
+    box-shadow: 0px 0px 4px 0px rgb(110 155 188 / 50%);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.button-break:hover {
+    box-shadow: 0px 0px 4px 0px rgb(110 155 188 / 100%);
+}
+
+.button-break:active {
+    color: #226797;
+    box-shadow: 0px 0px 4px 0px rgb(118, 180, 225);
+}
+
+.button-leave {
+    height: 44px;
+    width: 90px;
+
+    border: none;
+    background-color: white;
+    margin-right: 5px;
+    box-shadow: 0px 0px 4px 0px rgb(110 155 188 / 50%);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.button-leave:hover {
+    box-shadow: 0px 0px 4px 0px rgb(110 155 188 / 100%);
+}
+
+.button-leave:active {
+    color: #226797;
+    box-shadow: 0px 0px 4px 0px rgb(118, 180, 225);
+}
+
+.noOrders {
+    padding-left: 25px;
+    opacity: 0.75;
+}
+
+// ORDER DETAILS
+
+.order-wrapper {
+    background-color: white;
+    border-radius: 5px;
+
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-bottom: 20px;
+
+    box-shadow: 0px 3px 10px 1px rgba(110,155,188,0.3);
+
+    margin-bottom: 10px;
+}
+
+.order-top-bar {
+    display: flex;
+
+    padding-top: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    place-content: space-between;
+}
+
+.order-top-bar > img {
+    width: 20px;
+    height: auto;
+}
+
+.order-top-bar > * {
+    align-self: center;
+}
+
+.order-top-bar > div > p {
+    margin-left: 7px;
+}
+
+.order-details {
+    margin-top: 15px;
+    margin-left: 25px;
+
+}
+
+.order-details-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-left: 25px;
+}
+
+.button-ready {
+    height: 40px;
+    width: 110px;
+    margin-top: 20px;
+    margin-left: 25px;
+
+    border: 1.5px solid #6E9BBC;
+    background-color: white;
+    border-radius: 7px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 7px;
+    cursor: pointer;
+}
+
+.button-ready:hover {
+    transition: 0.35s;
+    color: white;
+    border: 1.5px solid #6E9BBC;
+    background-color: #6E9BBC;
+}
+
+.button-ready:active {
+    transition: 0.35s;
+    color: white;
+    border: 1.5px solid #4b93c7;
+    background-color: #4b93c7;
+}
+
+.flex {
+    display: flex;
+}
+
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 1600px) {
+    .bartender-cont {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+
+@media screen and (max-width: 1400px) {
+    .button-break {
+        width: 80px;
+        margin-left: 0px;
+    }
+    
+    .button-leave {
+        width: 80px;
+        margin-left: 0px;
+    }
+
+    .order-wrapper {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .bartender-photo {
+        margin-right: 10px   
+    }
+
+}
+
+@media screen and (max-width: 1310px) {
+
+    .bartender-cont:nth-of-type(1) {
+        border-bottom: colors.$blue-color2 1px solid;
+    }
+    
+    .bartender-cont:nth-of-type(2) {
+        border-left: none;
+        border-bottom: colors.$blue-color2 1px solid;
+    }
+    
+    .bartender-cont:nth-of-type(3) {
+        border-right: none;
+    }
+
+    .bartender-cont {
+        width: 100%;
+        border-bottom: colors.$blue-color2 1px solid;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    #main-orders {
+        margin-left: 0px;
+    }
+
+    #orders-content {
+        margin-left: 100px;
+    }
+
+    #bartenders-wrapper {
+        margin-left: 15px;
+    }
+
+    #queue-wrapper {
+        min-width: 350px;
+        max-width: 350px;
+    }
+        
+  }
+
+// when TABS are appearing
+
+@media screen and (max-width: 900px) {
+    #bartenders-wrapper {
+        display: contents;
+    }
+
+    .bartender-cont:nth-of-type(1) {
+        border-bottom: none;
+    }
+    
+    .bartender-cont:nth-of-type(2) {
+        border-left: none;
+        border-bottom: none;
+    }
+    
+    .bartender-cont:nth-of-type(3) {
+        border-right: none;
+    }
+
+    .bartender-cont {
+        width: 100%;
+        border-bottom: none;
+    }
+
+    #queue-wrapper {
+        min-width: calc(100vw - 155px);
+        max-width: calc(100vw - 155px);
+        
+        height: 100vh;
+    }
+
+    #orders-content {
+        margin-top: 0px;
+        // height: fit-content;
+        height: 100vh;
+    }
+
+    .queue-order-wrapper {
+        max-width: 420px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    
+    #main-orders {
+        margin-left: 0px;
+    }
+    #orders-content {
+        margin-left: 0px;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+
+    #bartenders-wrapper {
+        margin-left: 0px;
+        margin-right: 0px;
+        justify-content: center;
+    }
+
+    #queue-wrapper {
+        min-width: 100vw;
+        max-width: 100vw;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #queue-wrapper > h2 {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    #queue-wrapper > #queue-orders {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    #queue-orders-place {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+
+
+  }

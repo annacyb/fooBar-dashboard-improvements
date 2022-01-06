@@ -1,0 +1,114 @@
+@use '../base/colors';
+
+#chart-box {
+  border-radius: 10px;
+  box-shadow: colors.$box-shadow;
+  background-color: white;
+  padding: 1vw 1vw 2.5vw 1vw;
+  height: 60vw !important;
+  width: 200%;
+  margin-left: 5%;
+}
+
+#revenue-today-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 10vw;
+}
+
+#served-today {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 1vw;
+
+  div {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: colors.$box-shadow;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40vw;
+    height: 24vw;
+    padding: 1vw;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 7vw;
+    color: colors.$blue-color4;
+  }
+  p {
+    font-size: 4vw;
+    font-weight: 200;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  #chart-box {
+    padding: 1vw 1vw 2.5vw 1vw;
+    height: 35vw !important;
+    width: 900px;
+    margin-left: 5%;
+  }
+
+  #served-today {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1vw;
+    div {
+      width: 35vw;
+      height: 17vw;
+      padding: 1vw;
+    }
+    h2 {
+      font-size: 5vw;
+      font-weight: 600;
+      color: colors.$blue-color4;
+    }
+    p {
+      font-size: 2.7vw;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #chart-box {
+    padding: 1vw 1vw 2.5vw 1vw;
+    height: 16.5vw !important;
+    width: auto;
+    margin-left: 0;
+  }
+
+  #revenue-today-wrap {
+    width: auto;
+    overflow-x: hidden;
+    margin-bottom: 0;
+  }
+
+  #served-today {
+    justify-content: space-between;
+    width: 100%;
+    gap: 1vw;
+    div {
+      width: 20vw;
+      text-align: center;
+      height: 18vw;
+      padding: 1vw;
+    }
+    h2 {
+      font-size: 4vw;
+      font-weight: 600;
+      color: colors.$blue-color4;
+    }
+    p {
+      font-size: 2vw;
+    }
+  }
+}

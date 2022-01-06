@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="shortcut icon" type="image/png" href="./images/companyIcon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.scss" />
+    <title>Inventory & Statistics</title>
+  </head>
+
+  <body id="inventory">
+    <header></header>
+
+    <nav>
+      <div id="side-nav">
+        <a href="./index.html">
+          <img src="./images/logo-small.png" alt="Logo" class="logo-img" />
+        </a>
+
+        <a href="./index.html">
+          <div class="nav-elem">
+            <img src="./icons/orders.svg" alt="" />
+            <p>Orders</p>
+          </div>
+        </a>
+
+        <a href="./inventory.html">
+          <div class="nav-elem">
+            <img src="./icons/inventory&statistics-active.svg" alt="" />
+            <p style="font-weight: 600">Inventory<br />& Statistics</p>
+          </div>
+        </a>
+
+        <a href="./history.html">
+          <div class="nav-elem">
+            <img src="./icons/history.svg" alt="" />
+            <p>History</p>
+          </div>
+        </a>
+      </div>
+
+      <div id="nav-bottom">
+        <a href="./index.html">
+          <h1 class="logo">LOGO</h1>
+        </a>
+
+        <a href="./index.html">
+          <div class="nav-elem-mobile">
+            <img src="./icons/orders.svg" alt="" />
+            <p>Orders</p>
+          </div>
+        </a>
+
+        <a href="./inventory.html">
+          <div class="nav-elem-mobile">
+            <img src="./icons/inventory&statistics-active.svg" alt="" />
+            <p>Inventory<br />& Statistics</p>
+          </div>
+        </a>
+
+        <a href="./history.html">
+          <div class="nav-elem-mobile">
+            <img src="./icons/history.svg" alt="" />
+            <p>History</p>
+          </div>
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <div id="top-bar">
+        <h1 id="web-title">Inventory & Statistics</h1>
+        <div id="cont-closing-time" class="closing-time">
+          <img src="./icons/time-left.svg" alt="" class="icon1" />
+          <p><span id="closing-in">Closing in </span><span id="closingHour"></span>h <span id="closingMinutes"></span><span>min</span></p>
+        </div>
+        <div class="cont-separator"></div>
+        <div id="web-title-mobile"><h1>Inventory</h1></div>
+        <div id="cont-current-time" class="current-time">
+          <p class="current-time-place"></p>
+        </div>
+      </div>
+
+      <section id="storageAndStat">
+        <div class="tap-list-container areas">
+          <h1>BEER TAPS</h1>
+          <ul class="tap-list">
+            TAP STOCK HERE
+          </ul>
+        </div>
+
+        <div class="list areas">
+          <h1>STORAGE</h1>
+          <ul class="stock-list">
+            BEER STOCK HERE
+          </ul>
+        </div>
+
+        <div class="areas">
+          <h1>SERVED TODAY</h1>
+          <div id="served-today">
+            <div>
+              <h2 class="nr-served-today"></h2>
+              <p id="orders-text" class="served-today-text">ORDERS</p>
+            </div>
+            <div>
+              <h2 class="beer-served-today"></h2>
+              <p id="beers-text" class="served-today-text">BEERS</p>
+            </div>
+          </div>
+        </div>
+        <div class="areas">
+          <h1>REVENUE TODAY</h1>
+
+          <div id="revenue-today-wrap">
+            <div id="revenue-today">
+              <div id="chart-box"><canvas id="myChart"></canvas></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <template class="template-stock">
+      <div class="stock-info-wrap">
+        <h2 class="stock-name"></h2>
+        <p class="stock-amount"></p>
+      </div>
+    </template>
+
+    <template class="template-tap">
+      <div class="tap-info-wrap">
+        <h2 class="tap-name"></h2>
+        <div class="circle">
+          <p class="tap-amount"></p>
+        </div>
+      </div>
+    </template>
+    <footer></footer>
+  </body>
+
+  <script type="module" src="/script/inventory/inventory-main.js"></script>
+  <script type="module" src="./script/modules/time-counting.js"></script>
+  <script type="module" src="./script/inventory/graph.js"></script>
+</html>

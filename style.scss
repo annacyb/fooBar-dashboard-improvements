@@ -1,0 +1,20 @@
+// general
+@use "./sass/base/reset";
+@use "./sass/base/colors";
+@use "./sass/base/typography";
+
+// components
+@use "./sass/components/navigation";
+@use './sass/components/top-bar';
+
+// inventory
+@use './sass/inventory/storage';
+@use './sass/inventory/taps';
+@use './sass/inventory/layout';
+@use './sass/inventory/statistics';
+
+// orders
+@use './sass/orders/layout-orders';
+@use './sass/orders/tabs';
+
+@use './sass/history/history';
