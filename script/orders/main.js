@@ -7,8 +7,6 @@ import {
 } from "./bartenders-orders.js";
 import { hideLoader } from "../modules/loader.js";
 
-// show loader imidiately --> hide loader for when data is loaded
-
 window.addEventListener("DOMContentLoaded", checkMediaQueries);
 window.addEventListener("DOMContentLoaded", start);
 
