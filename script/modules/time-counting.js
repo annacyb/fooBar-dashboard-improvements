@@ -36,7 +36,9 @@ function changeTimestampToHour(timestamp) {
 
 function showTimeTillClosing(ordersData, currentTime) {
     // get closing time from database (it is only hour not timestamp)
+
     const closingHour = ordersData.bar.closingTime;
+
     const dateNow = dayjs().format("MM-DD-YYYY");
 
     const closingTime = dayjs(
@@ -53,14 +55,21 @@ function showTimeTillClosing(ordersData, currentTime) {
     let secondsLeft = Math.floor(diff - hoursLeft * 3600 - minuteLeft * 60);
 
     // show time till closing in HTML
-    const hoursLeftPlace = document.getElementById("closingHour");
-    const minutesLeftPlace = document.getElementById("closingMinutes");
 
-    hoursLeftPlace.innerHTML = "";
-    hoursLeftPlace.innerHTML = hoursLeft;
+    // Condition used for checking if it's after or before closing hour (indicated by closingHour)
+    if (hoursLeft < 0) {
+        let closingInfoPlace = document
+            .querySelector("#cont-closing-time")
+            .getElementsByTagName("p")[0];
 
-    minutesLeftPlace.innerHTML = "";
-    minutesLeftPlace.innerHTML = minuteLeft;
+        closingInfoPlace.innerHTML = "Bar closed";
+    } else {
+        const hoursLeftPlace = document.getElementById("closingHour");
+        hoursLeftPlace.innerHTML = hoursLeft;
+
+        const minutesLeftPlace = document.getElementById("closingMinutes");
+        minutesLeftPlace.innerHTML = minuteLeft;
+    }
 }
 
 setInterval(getCurrentTime, 1000);
