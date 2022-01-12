@@ -90,12 +90,54 @@
         </div>
       </div>
 
-      <section id="message">
-        <img id="klepsydra" src="./public/icons/klepsydra.svg" />
-        <h2>Coming soon...</h2>
-        <p>We're sorry- this page isn't available yet</p>
+      <div id="content-history">
+      <section>
+      <span>
+        <input type="search" placeholder=" ⌕ search student..." id="search" name="search" />
+      </span>
+</section>
+
+<div id="history-layout">
+      <section id="table-container">
+        <table id="list" class="list_categories">
+          <thead>
+            <tr id="sorting">
+              
+              <th data-action="sort" data-sort-direction="asc" data-sort="id">&#11139 ID</th>
+              <th data-action="sort" data-sort-direction="asc" data-sort="date"> date</th>
+              <th data-action="sort" data-sort-direction="asc" data-sort="served">served time</th>
+              <th data-action="sort" data-sort-direction="asc" data-sort="value">total value</th>
+              <th data-action="sort" data-sort-direction="asc" data-sort="bartender">bartender serving</th>
+            </tr>
+          </thead>
+          <tbody id="active">
+            <!-- student template will be copied and inserted here -->
+          </tbody>
+        </table>
+
+        <template id="order">
+          <tr>
+            <td data-field="id">NAME</td>
+            <td data-field="date">MIDDLE</td>
+            <td data-field="time">MIDDLE</td>
+            <td data-field="value">MIDDLE</td>
+            <td data-field="bartender">MIDDLE</td>
+            
+          </tr>
+        </template>
+      </section>
+      <section id="info-box"> 
+
+        <div id="flexbox">
+       <h2> &#9432 ORDER ID</h2>
+<p>beer1</p>
+<p>beer2</p>
+<p>TOTAL</p>
+</div>
       </section>
 
+    </div> 
+</div>
     </main>
 
     <script type="module" src="./script/modules/time-counting.js"></script>

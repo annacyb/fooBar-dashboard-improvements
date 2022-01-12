@@ -1,31 +1,46 @@
 import { refresh_rate } from "../modules/settings.js";
-import { get_orders, get_beers } from "../modules/api.js";
 import { hideLoader } from "../modules/loader.js";
+import { historyOrders } from "../modules/history-orders";
 
 window.addEventListener("DOMContentLoaded", start);
 
-const data = {
-    beers: {},
-    orders: {},
-};
-
 async function start() {
-    loop();
+  loop();
+}
+
+function showData(orders) {
+  displayList(orders);
 }
 
 async function loop() {
-    await loadData();
-    // showData();
-    hideLoader();
-    setTimeout(loop, refresh_rate);
+  const ordersHistory = historyOrders.orders;
+  showData(ordersHistory);
+  hideLoader();
+  setTimeout(loop, refresh_rate);
 }
 
-async function loadData() {
-    data.beers = await get_beers();
-    data.orders = await get_orders();
+function displayList(orders) {
+  // clear the list
+  document.querySelector("#list tbody").innerHTML = "";
+
+  // build a new list
+  orders.forEach(displayOrder);
 }
 
-// function showData() {
-//     showQueue(data);
-//     showBartendersOrders(data);
-// }
+function displayOrder(order) {
+  console.log(order.id);
+  // create clone
+  const clone = document.querySelector("template#order").content.cloneNode(true);
+
+  // set clone data
+  clone.querySelector("[data-field=id]").textContent = order.id;
+  clone.querySelector("[data-field=date]").textContent = order.date;
+  clone.querySelector("[data-field=time]").textContent = order.served;
+  clone.querySelector("[data-field=value]").textContent = order.value;
+  clone.querySelector("[data-field=bartender]").textContent = order.bartender;
+
+  //   clone.querySelector("[data-field=id]").addEventListener("click", () => showPopUp(order));
+  //   closePop.addEventListener("click", () => (popup.style.display = "none"));
+
+  document.querySelector("#list tbody").appendChild(clone);
+}

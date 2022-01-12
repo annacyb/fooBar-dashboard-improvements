@@ -1,27 +1,65 @@
+@use '../base/colors';
+@use '../base/typography';
+
 #history {
   background-image: linear-gradient(180deg, white 0%, #d9e4ed 100%);
   width: 100%;
   height: 100vh;
-  h2 {
-    margin-top: 2vw;
-    font-size: 1.7rem;
+  margin-top: 2vw;
+  font-family: typography.$font1;
+
+  #content-history {
+    margin-top: 70px;
+    margin-left: 20px;
   }
-  p {
-    font-size: 1.2rem;
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: colors.$box-shadow;
   }
-  #message {
+
+  tr th {
+    text-align: center;
+    font-weight: 200;
+    padding: 12px;
+    border-bottom: 1px solid colors.$blue-color3;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+
+  #list tbody tr td {
+    padding: 20px;
+    margin-right: 15px;
+    border-top: 1px solid colors.$blue-color2;
     text-align: center;
   }
 }
-#klepsydra {
-  margin-top: 200px;
-  width: 7rem;
-  padding-bottom: 0;
-  margin-bottom: 0;
+
+#history-layout {
+  display: grid;
+  grid-template-columns: 70% 18%;
+  gap: 2%;
+
+  #info-box {
+    h2 {
+      background-color: colors.$orange-color1;
+      border-radius: 10px 10px 0 0;
+      border-bottom: solid 2px colors.$orange-color2;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: 100;
+    }
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: colors.$box-shadow;
+  }
 }
 
 @media screen and (min-width: 600px) {
-  #message {
-    width: calc(100vw - 100px);
-  }
 }
