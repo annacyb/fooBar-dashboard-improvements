@@ -6,7 +6,7 @@ const historyOrders = {
       served: "11:10:40 AM",
       value: "120 DKK",
       bartender: "Jonas",
-      order: ["beer", "beer2", "beer3"],
+      details: ["beer", "beer2", "beer3"],
     },
     {
       id: "#73",
@@ -14,7 +14,23 @@ const historyOrders = {
       served: "11:10:40 AM",
       value: "120 DKK",
       bartender: "Jonas",
-      order: ["beer", "beer2", "beer3"],
+      details: ["beer", "kotek", "beer3"],
+    },
+    {
+      id: "#79",
+      date: "9 January",
+      served: "11:10:40 AM",
+      value: "120 DKK",
+      bartender: "Jonas",
+      details: ["beer", "kotek", "beer3"],
+    },
+    {
+      id: "#90",
+      date: "9 January",
+      served: "11:10:40 AM",
+      value: "120 DKK",
+      bartender: "Jonas",
+      details: ["beer", "kotek", "beer3"],
     },
   ],
 };

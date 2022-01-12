@@ -93,7 +93,7 @@
       <div id="content-history">
       <section>
       <span>
-        <input type="search" placeholder=" ⌕ search student..." id="search" name="search" />
+        <input type="search" placeholder="Search orders" id="search" name="search" />
       </span>
 </section>
 
@@ -116,21 +116,22 @@
         </table>
 
         <template id="order">
-          <tr>
-            <td data-field="id">NAME</td>
-            <td data-field="date">MIDDLE</td>
-            <td data-field="time">MIDDLE</td>
-            <td data-field="value">MIDDLE</td>
-            <td data-field="bartender">MIDDLE</td>
+          <tr id="row">
+            <td data-field="id">X</td>
+            <td data-field="date">X</td>
+            <td data-field="time">X</td>
+            <td data-field="value">X</td>
+            <td data-field="bartender">X</td>
             
           </tr>
         </template>
       </section>
-      <section id="info-box"> 
+      <section id="info-box" class="hidden"> 
 
         <div id="flexbox">
        <h2> &#9432 ORDER ID</h2>
-<p>beer1</p>
+       <span id="close-btn">X</span>
+<p class="beer">beer1</p>
 <p>beer2</p>
 <p>TOTAL</p>
 </div>
