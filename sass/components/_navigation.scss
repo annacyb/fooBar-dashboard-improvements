@@ -1,9 +1,64 @@
+// NEW CODE
+
+@use '../base/colors';
+
+aside {
+    text-align: center;
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+        li {
+            padding: 20px 0 10px 0;
+            cursor: pointer;
+            &:hover {
+                border-left: 3px solid colors.$blue-color3;
+                background: colors.$blue-color0;
+                i {
+                    color: colors.$blue-color3 !important;
+                }
+            }
+            .nav-item {
+                display: inline-block;
+                width: 30px;
+                overflow: hidden;
+                height: 30px;
+                transition: width .3s ease-in-out;
+                white-space: nowrap;
+                color: colors.$blue-color3;
+                i {
+                    float: left;
+                    position: relative;
+                    top: -3px;
+                    color: colors.$blue-color3;
+                    font-size: 30px;
+                }
+                span {
+                    opacity: 0;
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+        .active{
+            border-left: 3px solid colors.$orange-color3;
+            background: colors.$orange-color0;
+            i {
+                color: colors.$orange-color3 !important;
+            }
+        }
+    }
+}
+
+// NEW CODE end
+
+
+
 #side-nav {
     position: fixed;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
 
     top: 0;
     left: 0;
