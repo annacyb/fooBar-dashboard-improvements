@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="noindex,nofollow" />
-    <link rel="shortcut icon" type="image/png" href="./images/companyIcon.png" /> 
+    <link rel="shortcut icon" type="image/png" href="./images/companyIcon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.scss" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <title>History of orders</title>
   </head>
   <body>
     <nav>
       <div id="side-nav">
         <a href="./index.html">
-          <img src="./images/logo-small.png" alt="Logo" class="logo-img"/>
+          <img src="./images/logo-small.png" alt="Logo" class="logo-img" />
         </a>
 
         <a href="./index.html">
@@ -76,7 +77,6 @@
     </div>
 
     <main id="history">
-
       <div id="top-bar">
         <h1 id="web-title">History</h1>
         <div id="cont-closing-time" class="closing-time">
@@ -91,54 +91,55 @@
       </div>
 
       <div id="content-history">
-      <section>
-      <span>
-        <input type="search" placeholder="Search orders" id="search" name="search" />
-      </span>
-</section>
+        <section class="top-section">
+          <input type="search" placeholder="Search orders" id="search" name="search" />
 
-<div id="history-layout">
-      <section id="table-container">
-        <table id="list" class="list_categories">
-          <thead>
-            <tr id="sorting">
-              
-              <th data-action="sort" data-sort-direction="asc" data-sort="id">&#11139 ID</th>
-              <th data-action="sort" data-sort-direction="asc" data-sort="date"> date</th>
-              <th data-action="sort" data-sort-direction="asc" data-sort="served">served time</th>
-              <th data-action="sort" data-sort-direction="asc" data-sort="value">total value</th>
-              <th data-action="sort" data-sort-direction="asc" data-sort="bartender">bartender serving</th>
-            </tr>
-          </thead>
-          <tbody id="active">
-            <!-- student template will be copied and inserted here -->
-          </tbody>
-        </table>
+          <span id="buttons">
+            <button class="button-filter"><i class="material-icons" style="font-size: 20px">filter_alt</i> FILTER</button>
+            <button class="button-date"><i class="material-icons" style="font-size: 20px">today</i> SELECT DATE</button>
+          </span>
+        </section>
 
-        <template id="order">
-          <tr id="row">
-            <td data-field="id">X</td>
-            <td data-field="date">X</td>
-            <td data-field="time">X</td>
-            <td data-field="value">X</td>
-            <td data-field="bartender">X</td>
-            
-          </tr>
-        </template>
-      </section>
-      <section id="info-box" class="hidden"> 
+        <div id="history-layout">
+          <section id="table-container">
+            <table id="list" class="list_categories">
+              <thead>
+                <tr id="sorting">
+                  <th data-action="sort" data-sort-direction="asc" data-sort="id">ID</th>
+                  <th data-action="sort" data-sort-direction="asc" data-sort="date">date</th>
+                  <th data-action="sort" data-sort-direction="asc" data-sort="">served time</th>
+                  <th>total value</th>
+                  <th>bartender serving</th>
+                </tr>
+              </thead>
+              <tbody id="active">
+                <!-- student template will be copied and inserted here -->
+              </tbody>
+            </table>
 
-        <div id="flexbox">
-       <h2> &#9432 ORDER ID</h2>
-       <span id="close-btn">X</span>
-<p class="beer">beer1</p>
-<p>beer2</p>
-<p>TOTAL</p>
-</div>
-      </section>
+            <template id="order">
+              <tr id="row">
+                <td data-field="id">X</td>
+                <td data-field="date">X</td>
+                <td data-field="time">X</td>
+                <td data-field="value">X</td>
+                <td data-field="bartender">X</td>
+              </tr>
+            </template>
+          </section>
+          <section id="info-box" class="hidden">
+            <div class="flex">
+              <i class="material-icons" style="font-size: 20px">info</i>
+              <h2 id="order-id">ORDER ID</h2>
+              <span id="close-btn">X</span>
+            </div>
 
-    </div> 
-</div>
+            <p class="beer"></p>
+
+            <p class="total">TOTAL</p>
+          </section>
+        </div>
+      </div>
     </main>
 
     <script type="module" src="./script/modules/time-counting.js"></script>

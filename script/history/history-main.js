@@ -4,10 +4,22 @@ import { historyOrders } from "../modules/history-orders";
 
 window.addEventListener("DOMContentLoaded", start);
 let popup = document.querySelector("#info-box");
+let ordersHistory = historyOrders.orders;
+
 // let closePop = document.querySelector("#close");
+const settings = {
+  filter: "all",
+  sortBy: "id",
+  sortDir: "asc",
+};
 
 async function start() {
+  registerButtons();
   loop();
+}
+
+function registerButtons() {
+  document.querySelectorAll("[data-action='sort']").forEach((button) => button.addEventListener("click", selectSort));
 }
 
 function showData(orders) {
@@ -15,10 +27,45 @@ function showData(orders) {
 }
 
 async function loop() {
-  const ordersHistory = historyOrders.orders;
+  ordersHistory = historyOrders.orders;
   showData(ordersHistory);
   hideLoader();
   setTimeout(loop, refresh_rate);
+}
+
+function selectSort(event) {
+  const sortBy = event.target.dataset.sort;
+  const sortDir = event.target.dataset.sortDirection;
+
+  //adding styling- indicator of how it is sorted at the moment
+  //find old sort b
+  const old = document.querySelector(`[data-sort="${settings.sortBy}"]`);
+  old.classList.remove("sortby");
+  //indicate active sort
+  event.target.classList.add("sortby");
+
+  //toggle the direction
+  if (sortDir === "asc") {
+    event.target.dataset.sortDirection = "desc";
+  } else {
+    event.target.dataset.sortDirection = "asc";
+  }
+
+  console.log(`user selected ${sortBy} ${sortDir}`);
+  setSort(sortBy, sortDir); // sending  two parameters to the setSort function
+}
+
+function setSort(sortBy, sortDir) {
+  settings.sortBy = sortBy; // adding those parameters to the global object
+  settings.sortDir = sortDir;
+
+  buildList();
+}
+
+function buildList() {
+  const sortedList = sortList(ordersHistory);
+
+  displayList(sortedList);
 }
 
 function displayList(orders) {
@@ -41,20 +88,26 @@ function displayOrder(order) {
   clone.querySelector("[data-field=value]").textContent = order.value;
   clone.querySelector("[data-field=bartender]").textContent = order.bartender;
 
-  clone.querySelector("#row").addEventListener("click", () => showPopUp(order.details));
+  const details = order.details;
+
+  clone.querySelector("#row").addEventListener("click", () => showPopUp(details, order.id));
   //   closePop.addEventListener("click", () => (popup.style.display = "none"));
 
   document.querySelector("#list tbody").appendChild(clone);
 }
-function showPopUp(order) {
+
+function showPopUp(order, id) {
   //   closePop.style.display = "";
   //   popup.style.display = "";
 
-  console.log(order);
+  const lineBreak = order.join("<br> ");
   popup.classList.remove("hidden");
   document.querySelector("#list").style.width = "100%";
 
-  popup.querySelector(".beer").textContent = order;
+  popup.querySelector(".beer").innerHTML = lineBreak;
+  popup.querySelector("#order-id").innerHTML = "&#9432 ORDER  " + id;
+  popup.querySelector(".total").innerHTML = "Total: " + order.length * 40 + " DKK";
+
   document.querySelector("#close-btn").addEventListener("click", hidePopup);
   //   popup.querySelector(".house").textContent = student.house;
   //   popup.querySelector(".blood").textContent = `Blood status: ${student.bloodstatus}`;
@@ -64,4 +117,26 @@ function showPopUp(order) {
 function hidePopup() {
   popup.classList.add("hidden");
   document.querySelector("#list").style.width = "130%";
+}
+
+function sortList(sortedList) {
+  let direction = 1;
+
+  if (settings.sortDir === "desc") {
+    direction = -1;
+  } else {
+    direction = 1;
+  }
+
+  sortedList = sortedList.sort(sortByProperty);
+
+  function sortByProperty(A, B) {
+    if (A[settings.sortBy] < B[settings.sortBy]) {
+      return -1 * direction;
+    } else {
+      return 1 * direction;
+    }
+  }
+
+  return sortedList;
 }
