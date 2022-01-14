@@ -9,107 +9,79 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <title>Incoming orders</title>
   </head>
+
   <body>
-    <head>
-      <nav>
-        <aside>
+    <nav>
+      <aside>
+        <a href="./index.html">
+          <img src="./images/logo-small-white.png" alt="Logo" class="logo-img" />
+        </a>
+        <ul>
           <a href="./index.html">
-            <img src="./images/logo-small-white.png" alt="Logo" class="logo-img" />
+            <li class="active">
+              <div class="nav-item">
+                <i class="material-icons">format_list_bulleted</i>
+              </div>
+              <p>Incoming<br />orders</p>
+            </li>
           </a>
-          <ul>
-            <a href="./index.html">
-              <li class="active">
+          <a href="./inventory.html">
+            <li>
+              <div class="nav-item">
+                <i class="material-icons">bar_chart</i>
+              </div>
+              <p>Inventory<br />& Statistics</p>
+            </li>
+          </a>
+          <a href="./history.html">
+            <li>
+              <div class="nav-item">
+                <i class="material-icons">history</i>
+              </div>
+              <p>Orders<br/>history</p>
+            </li>
+          </a>
+        </ul>
+      </aside>
+
+      <div id="nav-bottom">
+      
+        <ul>
+          <a href="./index.html" class="active-elem">
+            <li class="active">
+              <div class="nav-elem-mobile">
                 <div class="nav-item">
                   <i class="material-icons">format_list_bulleted</i>
                 </div>
-                <p>Incoming<br />orders</p>
-              </li>
-            </a>
-            <a href="./inventory.html">
-              <li>
+                <p>Incoming orders</p>
+              </div>
+            </li>
+          </a>
+
+          <a href="./inventory.html">
+            <li class="active">
+              <div class="nav-elem-mobile">
                 <div class="nav-item">
                   <i class="material-icons">bar_chart</i>
                 </div>
                 <p>Inventory<br />& Statistics</p>
-              </li>
-            </a>
-            <a href="./history.html">
-              <li>
+              </div>
+            </li>
+          </a>
+
+          <a href="./history.html">
+            <li class="active">
+              <div class="nav-elem-mobile">
                 <div class="nav-item">
                   <i class="material-icons">history</i>
                 </div>
                 <p>Orders<br/>history</p>
-              </li>
-            </a>
-          </ul>
-        </aside>
-
-        <!-- <div id="nav-bottom">
-          <a href="./index.html">
-            <h1 class="logo">LOGO</h1>
+              </div>
+            </li>
           </a>
-
-          <a href="./index.html">
-            <div class="nav-elem-mobile">
-              <img src="./icons/orders-active.svg" alt="" />
-              <p>Incoming orders</p>
-            </div>
-          </a>
-
-          <a href="./inventory.html">
-            <div class="nav-elem-mobile">
-              <img src="./icons/inventory&statistics.svg" alt="" />
-              <p>Inventory<br />& Statistics</p>
-            </div>
-          </a>
-
-          <a href="./history.html">
-            <div class="nav-elem-mobile">
-              <img src="./icons/history.svg" alt="" />
-              <p>History</p>
-            </div>
-          </a>
-        </div> -->
-
-        <div id="nav-bottom">
-        
-          <ul>
-            <a href="./index.html" class="active-elem">
-              <li class="active">
-                <div class="nav-elem-mobile">
-                  <div class="nav-item">
-                    <i class="material-icons">format_list_bulleted</i>
-                  </div>
-                  <p>Incoming orders</p>
-                </div>
-              </li>
-            </a>
-
-            <a href="./inventory.html">
-              <li class="active">
-                <div class="nav-elem-mobile">
-                  <div class="nav-item">
-                    <i class="material-icons">bar_chart</i>
-                  </div>
-                  <p>Inventory<br />& Statistics</p>
-                </div>
-              </li>
-            </a>
-
-            <a href="./history.html">
-              <li class="active">
-                <div class="nav-elem-mobile">
-                  <div class="nav-item">
-                    <i class="material-icons">history</i>
-                  </div>
-                  <p>Orders<br/>history</p>
-                </div>
-              </li>
-            </a>
-          </ul>
-        </div>
-      </nav>
-    </head>
+        </ul>
+      </div>
+    </nav>
 
     <main id="main-orders">
 

@@ -35,7 +35,6 @@ aside {
             &:hover {
                 opacity: 1;
                 border-left: 3px solid colors.$orange-color3;
-                transition: 0.4s ease-out;
                 background-color: #6894b5;
                 i {
                     color: white !important;
@@ -47,9 +46,9 @@ aside {
             }
             .nav-item {
                 display: inline-block;
-                width: 35px;
+                width: 30px;
                 overflow: hidden;
-                height: 35px;
+                height: 30px;
                 white-space: nowrap;
                 color: colors.$blue-color3;
                 i {
@@ -57,12 +56,13 @@ aside {
                     position: relative;
                     top: -3px;
                     color: white;
-                    font-size: 35px;
+                    font-size: 30px;
                 }
             }
 
         }
         .active {
+            transition: 0.4s ease-out;
             opacity: 1;
             border-left: 3px solid white;
             background: linear-gradient(90deg, #407095 0%, #5d8aac 100%, rgba(93, 138, 172, 0) 100%);
