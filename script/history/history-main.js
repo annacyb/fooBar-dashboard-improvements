@@ -116,7 +116,7 @@ function showPopUp(order, id) {
 
 function hidePopup() {
   popup.classList.add("hidden");
-  document.querySelector("#list").style.width = "130%";
+  document.querySelector("#list").style.width = "131%";
 }
 
 function sortList(sortedList) {
