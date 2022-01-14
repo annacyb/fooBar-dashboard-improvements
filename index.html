@@ -7,66 +7,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.scss" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <title>Orders</title>
+    <title>Incoming orders</title>
   </head>
+
   <body>
-    <head>
-      <nav>
-        <div id="side-nav">
+    <nav>
+      <aside>
+        <a href="./index.html">
+          <img src="./images/logo-small-white.png" alt="Logo" class="logo-img" />
+        </a>
+        <ul>
           <a href="./index.html">
-            <img src="./images/logo-small.png" alt="Logo" class="logo-img" />
+            <li class="active">
+              <div class="nav-item">
+                <i class="material-icons">format_list_bulleted</i>
+              </div>
+              <p>Incoming<br />orders</p>
+            </li>
           </a>
+          <a href="./inventory.html">
+            <li>
+              <div class="nav-item">
+                <i class="material-icons">bar_chart</i>
+              </div>
+              <p>Inventory<br />& Statistics</p>
+            </li>
+          </a>
+          <a href="./history.html">
+            <li>
+              <div class="nav-item">
+                <i class="material-icons">history</i>
+              </div>
+              <p>Orders<br/>history</p>
+            </li>
+          </a>
+        </ul>
+      </aside>
 
-          <a href="./index.html">
-            <div class="nav-elem">
-              <img src="./icons/orders-active.svg" alt="" />
-              <p style="font-weight: 600">Orders</p>
-            </div>
+      <div id="nav-bottom">
+      
+        <ul>
+          <a href="./index.html" class="active-elem">
+            <li class="active">
+              <div class="nav-elem-mobile">
+                <div class="nav-item">
+                  <i class="material-icons">format_list_bulleted</i>
+                </div>
+                <p>Incoming orders</p>
+              </div>
+            </li>
           </a>
 
           <a href="./inventory.html">
-            <div class="nav-elem">
-              <img src="./icons/inventory&statistics.svg" alt="" />
-              <p>Inventory<br />& Statistics</p>
-            </div>
+            <li class="active">
+              <div class="nav-elem-mobile">
+                <div class="nav-item">
+                  <i class="material-icons">bar_chart</i>
+                </div>
+                <p>Inventory<br />& Statistics</p>
+              </div>
+            </li>
           </a>
 
           <a href="./history.html">
-            <div class="nav-elem">
-              <img src="./icons/history.svg" alt="" />
-              <p>History</p>
-            </div>
+            <li class="active">
+              <div class="nav-elem-mobile">
+                <div class="nav-item">
+                  <i class="material-icons">history</i>
+                </div>
+                <p>Orders<br/>history</p>
+              </div>
+            </li>
           </a>
-        </div>
-
-        <div id="nav-bottom">
-          <a href="./index.html">
-            <h1 class="logo">LOGO</h1>
-          </a>
-
-          <a href="./index.html">
-            <div class="nav-elem-mobile">
-              <img src="./icons/orders-active.svg" alt="" />
-              <p>Orders</p>
-            </div>
-          </a>
-
-          <a href="./inventory.html">
-            <div class="nav-elem-mobile">
-              <img src="./icons/inventory&statistics.svg" alt="" />
-              <p>Inventory<br />& Statistics</p>
-            </div>
-          </a>
-
-          <a href="./history.html">
-            <div class="nav-elem-mobile">
-              <img src="./icons/history.svg" alt="" />
-              <p>History</p>
-            </div>
-          </a>
-        </div>
-      </nav>
-    </head>
+        </ul>
+      </div>
+    </nav>
 
     <main id="main-orders">
 
@@ -81,13 +96,13 @@
       </div>
 
       <div id="top-bar">
-        <h1 id="web-title">Orders</h1>
+        <h1 id="web-title">Incoming orders</h1>
         <div id="cont-closing-time" class="closing-time">
           <img src="./icons/time-left.svg" alt="" class="icon1" />
           <p><span id="closing-in">Closing in </span><span id="closingHour"></span>h <span id="closingMinutes"></span><span>min</span></p>
         </div>
         <div class="cont-separator"></div>
-        <div id="web-title-mobile"><h1>Orders</h1></div>
+        <div id="web-title-mobile"><h1>Incoming orders</h1></div>
         <div id="cont-current-time" class="current-time">
           <p class="current-time-place"></p>
         </div>
