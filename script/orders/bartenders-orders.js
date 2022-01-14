@@ -100,7 +100,7 @@ function countBartenderOrder(lowercaseName, bartenderWrapper, order_id) {
     }
 
     bartenderWrapper.querySelector(".bartender-nr-orders").innerHTML =
-        bartenderOrdersCount[lowercaseName].length + " orders";
+        bartenderOrdersCount[lowercaseName].length + " orders served";
 }
 
 function countIdenticalBeers(order) {
