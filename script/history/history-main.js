@@ -121,6 +121,7 @@ function displayOrder(order) {
 function showPopUp(order, id) {
   const lineBreak = order.join("<br> ");
   popup.classList.remove("hidden");
+  document.querySelector("#background").classList.remove("hidden");
   document.querySelector("#list").style.width = "100%";
 
   popup.querySelector(".beer").innerHTML = lineBreak;
@@ -132,5 +133,6 @@ function showPopUp(order, id) {
 
 function hidePopup() {
   popup.classList.add("hidden");
-  document.querySelector("#list").style.width = "131%";
+  document.querySelector("#background").classList.add("hidden");
+  document.querySelector("#list").style.width = "138%";
 }

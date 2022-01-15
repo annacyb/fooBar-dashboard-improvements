@@ -106,8 +106,20 @@ $font1: "Open Sans", sans-serif;
   margin-left: auto;
   margin-right: auto;
 }
+tr th {
+  font-size: 0.9rem;
+}
 
-@media screen and (min-width: 600px) and (max-width: 1200px) {
+#list tbody tr td {
+  font-size: 0.85rem;
+}
+
+.button-filter,
+.button-date {
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 600px) {
   .tap-name,
   .stock-name {
     font-size: 1.9vw;
@@ -119,6 +131,17 @@ $font1: "Open Sans", sans-serif;
 
   .stock-amount {
     font-size: 5.5vw;
+  }
+
+  #list tbody tr td {
+    font-size: 1rem;
+  }
+  tr th {
+    font-size: 1.05rem;
+  }
+  .button-filter,
+  .button-date {
+    font-size: 0.9rem;
   }
 }
 
