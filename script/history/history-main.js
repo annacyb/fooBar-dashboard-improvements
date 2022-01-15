@@ -124,7 +124,7 @@ function showPopUp(order, id) {
   document.querySelector("#list").style.width = "100%";
 
   popup.querySelector(".beer").innerHTML = lineBreak;
-  popup.querySelector("#order-id").innerHTML = "&#9432 ORDER  " + id;
+  popup.querySelector("#order-id").innerHTML = "&#9432 ORDER  #" + id;
   popup.querySelector(".total").innerHTML = "Total: " + order.length * 40 + " DKK";
 
   document.querySelector("#close-btn").addEventListener("click", hidePopup);

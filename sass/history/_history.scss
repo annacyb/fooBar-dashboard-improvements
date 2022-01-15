@@ -76,12 +76,20 @@
     border-top: 0;
   }
 
+  #sorting th[data-action="sort"]:hover {
+    cursor: pointer;
+  }
+
+  #sorting th[data-action="sort"]::after {
+    content: " ↑↓";
+  }
+
   #sorting th.sortby[data-sort-direction="asc"]::after {
-    content: " ↑";
+    content: " ↑ ";
     color: colors.$orange-color3;
   }
   #sorting th.sortby[data-sort-direction="desc"]::after {
-    content: " ↓";
+    content: "  ↓";
     color: colors.$orange-color3;
   }
 }
