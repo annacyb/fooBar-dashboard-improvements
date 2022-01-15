@@ -8,6 +8,7 @@
   height: 60vw !important;
   width: 200%;
   margin-left: 5%;
+  margin-bottom: 50px;
 }
 
 #revenue-today-wrap {
@@ -47,12 +48,13 @@
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width: 1200px) {
   #chart-box {
     padding: 1vw 1vw 2.5vw 1vw;
     height: 35vw !important;
-    width: 900px;
+    width: 1200px;
     margin-left: 5%;
+    margin-bottom: 0;
   }
 
   #served-today {
@@ -78,12 +80,13 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   #chart-box {
-    padding: 1vw 1vw 2.5vw 1vw;
-    height: 16.5vw !important;
+    padding: 1vw 1vw 1vw 1vw;
+    height: 17vw !important;
     width: auto;
     margin-left: 0;
+    margin-bottom: 0;
   }
 
   #revenue-today-wrap {
@@ -99,7 +102,7 @@
     div {
       width: 20vw;
       text-align: center;
-      height: 18vw;
+      height: 17vw;
       padding: 1vw;
     }
     h2 {

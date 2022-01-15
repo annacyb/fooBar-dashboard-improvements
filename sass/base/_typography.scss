@@ -80,3 +80,62 @@ $font1: "Open Sans", sans-serif;
     font-weight: 400;
   }
 }
+
+.tap-name {
+  font-weight: 100;
+  text-align: center;
+  font-size: 3.1vw;
+}
+.tap-amount {
+  text-align: center;
+  font-size: 4vw;
+}
+
+.stock-name {
+  font-size: 3.1vw;
+  font-weight: 100;
+  text-align: center;
+}
+
+.stock-amount {
+  text-align: center;
+  font-size: 7vw;
+  color: colors.$blue-color4;
+  font-weight: 600;
+  height: 5vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .tap-name,
+  .stock-name {
+    font-size: 1.9vw;
+  }
+
+  .tap-amount {
+    font-size: 2.4vw;
+  }
+
+  .stock-amount {
+    font-size: 5.5vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tap-name,
+  .stock-name {
+    font-size: 1.05vw;
+  }
+
+  .tap-amount {
+    font-size: 1.4vw;
+  }
+
+  .stock-amount {
+    text-align: center;
+    font-size: 3.5vw;
+    width: 4vw;
+    height: 5vw;
+  }
+}

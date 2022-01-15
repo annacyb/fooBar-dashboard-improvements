@@ -3,9 +3,9 @@
 
 #history {
   background-image: linear-gradient(180deg, white 0%, #d9e4ed 100%);
-  height: 100vh;
   margin-top: 2vw;
   font-family: typography.$font1;
+  min-height: 100vh;
 
   #content-history {
     margin-top: 100px;
@@ -36,6 +36,7 @@
     background-color: white;
     border-radius: 10px;
     box-shadow: colors.$box-shadow;
+    margin-bottom: 30px;
   }
 
   tr th {

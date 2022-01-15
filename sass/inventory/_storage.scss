@@ -14,76 +14,46 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-.stock-name {
-  font-size: 3.1vw;
-  font-weight: 100;
-  text-align: center;
-}
 
-.stock-amount {
-  text-align: center;
-  font-size: 7vw;
-  color: colors.$blue-color4;
-  font-weight: 600;
-  width: 4vw;
-  height: 5vw;
-  border-radius: 200%;
-  margin-left: auto;
-  margin-right: auto;
-}
 .stock-info-wrap {
   padding-top: 3vw;
   padding-bottom: 5vw;
 }
 
-@media screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width: 1200px) {
   .list {
     ul {
       margin-left: auto;
       margin-right: auto;
-      height: 40vw;
+      height: 42vw;
       width: 90%;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       margin-top: auto;
       margin-bottom: auto;
     }
   }
-  .stock-name {
-    font-size: 1.8vw;
-  }
 
-  .stock-amount {
-    font-size: 5.5vw;
-  }
   .stock-info-wrap {
-    padding-top: 1.3vw;
+    padding-top: 2.5vw;
     padding-bottom: 3vw;
     margin-left: -1vw;
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   .list {
     ul {
       width: auto;
-      height: 18vw;
-      padding: 1vw 1vw 1vw 0.3vw;
+      height: 17vw;
+      padding: 1vw 0vw 1vw 0vw;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
   }
-  .stock-name {
-    font-size: 1.05vw;
-  }
 
-  .stock-amount {
-    text-align: center;
-    font-size: 3.5vw;
-    width: 4vw;
-    height: 5vw;
-  }
   .stock-info-wrap {
-    padding-top: 1.3vw;
+    margin-left: -1vw;
+    padding-top: 1.1vw;
     padding-bottom: 1.3vw;
   }
 }

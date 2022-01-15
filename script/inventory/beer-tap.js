@@ -15,15 +15,14 @@ async function showTapStatus(beerObject) {
   const list = document.querySelector(".tap-list");
   const template = document.querySelector(".template-tap").content.cloneNode(true);
 
-  const { level, capacity, beer } = beerObject;
-
+  const { id, level, capacity, beer } = beerObject;
   //get the beer color from the json file
   const beerColor = await setBeerGradient(beer);
 
   //calculate the percentage with level and capacity
   template.querySelector(".tap-amount").textContent = Math.round((level / capacity) * 100) + "%";
 
-  template.querySelector(".tap-name").textContent = beer;
+  template.querySelector(".tap-name").textContent = id + 1 + ". " + beer;
   template.querySelector(".circle").style.background = beerColor;
   list.append(template);
 }
