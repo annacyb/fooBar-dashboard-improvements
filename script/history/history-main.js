@@ -134,5 +134,5 @@ function showPopUp(order, id) {
 function hidePopup() {
   popup.classList.add("hidden");
   document.querySelector("#background").classList.add("hidden");
-  document.querySelector("#list").style.width = "138%";
+  document.querySelector("#list").style.width = "136.5%";
 }
