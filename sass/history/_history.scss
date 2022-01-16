@@ -80,7 +80,7 @@
     background-color: white;
     border-radius: 10px;
     box-shadow: colors.$box-shadow;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     overflow-x: auto;
     margin-right: 20px;
   }
@@ -216,6 +216,9 @@
 
 @media screen and (min-width: 600px) {
   #history {
+    #scroll {
+      display: none;
+    }
     #content-history {
       margin-left: 50px;
     }

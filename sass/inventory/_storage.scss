@@ -4,9 +4,9 @@
   ul {
     margin-left: auto;
     margin-right: auto;
-    height: 75vw;
+    height: 80vw;
     width: 90%;
-    padding: 1vw 1vw 1vw 1vw;
+    padding: 2.5vw 1vw 1vw 1vw;
     border-radius: 10px;
     background-color: white;
     box-shadow: colors.$box-shadow;
@@ -25,7 +25,7 @@
     ul {
       margin-left: auto;
       margin-right: auto;
-      height: 42vw;
+      height: 44vw;
       width: 90%;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       margin-top: auto;
@@ -34,8 +34,8 @@
   }
 
   .stock-info-wrap {
-    padding-top: 2.5vw;
-    padding-bottom: 3vw;
+    padding-top: 2.7vw;
+    padding-bottom: 2vw;
     margin-left: -1vw;
   }
 }
@@ -44,7 +44,7 @@
   .list {
     ul {
       width: auto;
-      height: 17vw;
+      height: 17.5vw;
       padding: 1vw 0vw 1vw 0vw;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
