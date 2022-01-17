@@ -34,16 +34,16 @@ const historyOrders = {
         },
 
         {
-            id: 21,
-            date: "11-Jan-2022",
+            id: 110,
+            date: "01-Mar-2022",
             served: "14:28:10",
             value: 120,
             bartender: "Peter",
             details: ["beer", "beer2", "beer3"],
         },
         {
-            id: 110,
-            date: "01-Feb-2022",
+            id: 301,
+            date: "01-Jun-2022",
             served: "10:55:21",
             value: 40,
             bartender: "Peter",

@@ -1,6 +1,7 @@
 import { refresh_rate } from "../modules/settings.js";
 import { hideLoader } from "../modules/loader.js";
 import { historyOrders } from "../modules/history-orders";
+import dayjs from "dayjs";
 
 window.addEventListener("DOMContentLoaded", start);
 let popup = document.querySelector("#info-box");
@@ -21,6 +22,10 @@ function registerButtons() {
     document
         .querySelectorAll("[data-action='sort']")
         .forEach((button) => button.addEventListener("click", selectSort));
+
+    document
+        .querySelectorAll("[data-action='sortDate']")
+        .forEach((button) => button.addEventListener("click", sortDate));
 }
 
 function showData(orders) {
@@ -85,6 +90,47 @@ function sortList(sortedList) {
 
     return sortedList;
 }
+
+// NEW BY ANNA
+
+function sortDate(event) {
+    const sortBy = event.target.dataset.sort;
+    const sortDir = event.target.dataset.sortDirection;
+
+    //adding styling- indicator of how it is sorted at the moment
+    //find old sort b
+    const old = document.querySelector(`[data-sort="${settings.sortBy}"]`);
+    old.classList.remove("sortby");
+    //indicate active sort
+    event.target.classList.add("sortby");
+
+    //toggle the direction
+    if (sortDir === "asc") {
+        event.target.dataset.sortDirection = "desc";
+    } else {
+        event.target.dataset.sortDirection = "asc";
+    }
+
+    console.log(sortDir); // "date" - where to put - column th name
+
+    // toggle arrows
+    let value = 1;
+    if (sortDir == "asc") {
+        value = -1;
+    }
+
+    ordersHistory = ordersHistory.sort((a, b) => {
+        return (
+            value *
+            (dayjs(a.date, "DD-MMM-YYYY") - dayjs(b.date, "DD-MMM-YYYY"))
+        );
+    });
+
+    console.log(ordersHistory);
+    setSort(sortBy, sortDir); // sending  two parameters to the setSort function
+}
+
+// NEW BY ANNA
 
 function buildList() {
     const sortedList = sortList(ordersHistory);
