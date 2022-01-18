@@ -6,6 +6,7 @@ import {
     checkMediaQueries,
 } from "./bartenders-orders.js";
 import { hideLoader } from "../modules/loader.js";
+import { setButtonsEventListeners } from "../orders/eventListeners.js";
 
 window.addEventListener("DOMContentLoaded", checkMediaQueries);
 window.addEventListener("DOMContentLoaded", start);
@@ -23,6 +24,7 @@ async function loop() {
     await loadData();
     showData();
     hideLoader();
+    setButtonsEventListeners();
     setTimeout(loop, refresh_rate);
 }
 
