@@ -45,7 +45,7 @@ const historyOrders = {
       id: 22,
       date: "20 January",
       served: "17:10:40",
-      value: 120,
+      value: 160,
       bartender: "Jonas",
       details: ["Sleighride", "El Hefe", "Ruined Childhood", "Steampunk"],
     },
