@@ -1,5 +1,4 @@
 function setButtonsEventListeners() {
-    console.log("WCHODZI");
     const leaveButtons = document.querySelectorAll(".button-leave");
     const readyButtons = document.querySelectorAll(".button-ready");
 
@@ -9,6 +8,8 @@ function setButtonsEventListeners() {
 
     leaveButtonsArray.forEach(setEventListener);
     readyButtonsArray.forEach(setEventListener);
+
+    setListenerOnOKButton();
 }
 
 function setEventListener(event) {
@@ -16,7 +17,17 @@ function setEventListener(event) {
 }
 
 function displayPopUp() {
-    console.log("POP UP NOW");
+    const popUpElem = document.querySelector("#pop-up-future-feature");
+    popUpElem.classList.remove("display-none");
+}
+
+function setListenerOnOKButton() {
+    const buttonOKElem = document.querySelector("#button-ok");
+    buttonOKElem.addEventListener("click", closePopUp);
+}
+function closePopUp() {
+    const popUpElem = document.querySelector("#pop-up-future-feature");
+    popUpElem.classList.add("display-none");
 }
 
 export { setButtonsEventListeners };
