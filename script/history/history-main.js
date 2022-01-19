@@ -62,6 +62,11 @@ function setSort(sortBy, sortDir) {
   buildList();
 }
 
+function buildList() {
+  const sortedList = sortList(ordersHistory);
+  displayList(sortedList);
+}
+
 function sortList(sortedList) {
   let direction = 1;
 
@@ -82,11 +87,6 @@ function sortList(sortedList) {
   }
 
   return sortedList;
-}
-
-function buildList() {
-  const sortedList = sortList(ordersHistory);
-  displayList(sortedList);
 }
 
 function displayList(orders) {
